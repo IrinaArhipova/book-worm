@@ -1,14 +1,15 @@
 require('@babel/register');
 
 const express = require('express');
+const session = require('express-session');
 const config = require('./config/serverConfig');
-const session = require('express-session')
 
 const homeRouter = require('./routes/render/home.routes');
 const regRouter = require('./routes/render/reg.routes');
 const loginRouter = require('./routes/render/login.routes');
-const logoutRouter = require('./routes/render/logout.routes.js');
+const logoutRouter = require('./routes/render/logout.routes');
 const sessionConfig = require('./config/sessionConfig');
+const commentRouter = require('./routes/render/comment.routes');
 
 const app = express();
 
@@ -16,12 +17,13 @@ const PORT = process.env.PORT ?? 3000;
 
 config(app);
 
-//render
+// render
 app.use(session(sessionConfig));
 app.use('/', homeRouter);
 app.use('/reg', regRouter);
 app.use('/login', loginRouter);
 app.use('/logout', logoutRouter);
+app.use('/comment', commentRouter);
 
 app.listen(PORT, () => {
   console.log(`Server started at ${PORT} port`);

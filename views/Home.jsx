@@ -1,24 +1,16 @@
 const React = require('react');
 const Layout = require('./Layout');
-const Nav = require('./Nav');
+const CardBook = require('./CardBook');
+const Comment = require('./Comment');
 
-module.exports = function Home({ users, email }) {
+module.exports = function Home({ user, books }) {
   return (
-    <Layout email={email}>
+    <Layout>
       <form>
-        <div className="container w-50">
-          <h3 className="mt-2">Mafiozniki</h3>
-          <ol className="list-group list-group-numbered mt-2">
-            {users.length ? (
-              users.map((user) => (
-                <li key={user.id} id="user.id" className="list-group-item">
-                  {user.email}
-                </li>
-              ))
-            ) : (
-              <li className="list-group-item">Nobody playing mafia</li>
-            )}
-          </ol>
+        <div id="card-list">
+          {books.map((book) => (
+            <CardBook key={book.id} books={book} />
+          ))}
         </div>
       </form>
     </Layout>
