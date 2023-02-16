@@ -8,7 +8,12 @@ module.exports = function Reg() {
       <form id="formReg" className="container-sm w-50 p-3">
         <h1 className="mt-3">Registration</h1>
         <div className="input-group mt-5">
-          <span className="input-group-text">Email and password</span>
+          <input
+            placeholder="Name here"
+            name="name"
+            type="text"
+            className="form-control"
+          ></input>
           <input
             placeholder="Email here"
             name="email"
