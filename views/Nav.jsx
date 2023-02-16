@@ -58,7 +58,6 @@ module.exports = function Nav({ user }) {
           </div>
         </div>
       </nav>
-      )
     </>
   );
 };

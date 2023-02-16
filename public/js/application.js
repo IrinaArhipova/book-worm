@@ -8,6 +8,7 @@ const logOut = document.getElementById('logOut');
 const regBtn = document.getElementById('regBtn');
 const logBtn = document.getElementById('logBtn');
 const input = document.getElementById('input');
+const rate = document.getElementById('rate')
 
 if (formReg) {
   formReg.addEventListener('submit', async (event) => {
@@ -35,6 +36,23 @@ if (formLog) {
     event.preventDefault();
     const { email, password } = event.target;
     const response = await fetch('/login', {
+      method: 'post',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email.value, password: password.value }),
+    });
+    const data = await response.text();
+    if (data === 'ok') {
+      window.location.href = 'http://localhost:3000';
+    } else {
+      input.innerHTML = data;
+    }
+  });
+}
+if (rate) {
+  rate.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const { mark } = event.target;
+    const response = await fetch('/rate', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email: email.value, password: password.value }),

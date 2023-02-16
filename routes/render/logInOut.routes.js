@@ -2,7 +2,6 @@ const router = require('express').Router();
 const bcrypt = require('bcrypt');
 const { User } = require('../../db/models');
 const Login = require('../../views/Login');
-const Home = require('../../views/Home');
 router
   .route('/login')
   .get(async (req, res) => {

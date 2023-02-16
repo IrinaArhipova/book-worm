@@ -13,6 +13,23 @@ module.exports = function Home({ users, user }) {
               users.map((user1) => (
                 <li key={user1.id} id="user.id" className="list-group-item">
                   {user1.name}
+                  <form>
+                    <select>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>6</option>
+                      <option>7</option>
+                      <option>8</option>
+                      <option>9</option>
+                      <option>10</option>
+                    </select>
+                    <button id="rate" type="submit" className="btn btn-dark ">
+                      Rate
+                    </button>
+                  </form>
                 </li>
               ))
             ) : (
