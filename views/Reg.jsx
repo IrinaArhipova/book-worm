@@ -1,6 +1,5 @@
 const React = require('react');
 const Layout = require('./Layout');
-const Nav = require('./Nav');
 
 module.exports = function Reg() {
   return (
@@ -13,23 +12,24 @@ module.exports = function Reg() {
             name="name"
             type="text"
             className="form-control"
-          ></input>
+          />
           <input
             placeholder="Email here"
             name="email"
             type="email"
             className="form-control"
-          ></input>
+          />
           <input
             placeholder="Password here"
             name="password"
             type="password"
             className="form-control"
-          ></input>
+          />
         </div>
         <button id="regBtn" type="submit" className="btn btn-primary mt-3">
           REG ME
         </button>
+        <div id="input" />
       </form>
     </Layout>
   );
