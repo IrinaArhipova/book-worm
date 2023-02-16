@@ -19,13 +19,13 @@ module.exports = function Reg() {
             name="email"
             type="email"
             className="form-control"
-          ></input>
+          />
           <input
             placeholder="Password here"
             name="password"
             type="password"
             className="form-control"
-          ></input>
+          />
         </div>
         <button id="regBtn" type="submit" className="btn btn-primary mt-3">
           REG ME
