@@ -18,7 +18,7 @@ config(app);
 //render
 app.use(session(sessionConfig));
 app.use('/', homeRouter);
-app.use('/', loginLogoutRouter);
+app.use('/auth', loginLogoutRouter);
 app.use('/reg', regRouter);
 
 app.listen(PORT, () => {
