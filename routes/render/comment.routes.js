@@ -12,14 +12,13 @@ router.get('/:id', async (req, res) => {
   } catch ({ message }) {
     res.json(message);
   }
-
-  router.post('/', async (req, res) => {
-    try {
-      
-    } catch ({ message }) {
-      res.json(message);
-    }
-  });
 });
+//   router.post('/', async (req, res) => {
+//     try {
+//     } catch ({ message }) {
+//       res.json(message);
+//     }
+//   });
+// });
 
 module.exports = router;
