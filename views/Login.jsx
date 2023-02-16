@@ -4,6 +4,7 @@ const Layout = require('./Layout');
 module.exports = function Login({ user }) {
   return (
     <Layout user={user}>
+
       <form id="formLog" className="container-sm w-50 p-3">
         <h1 className="mt-3">Log in</h1>
         <div className="input-group mt-5">

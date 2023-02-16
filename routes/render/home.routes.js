@@ -4,11 +4,8 @@ const Home = require('../../views/Home');
 
 router.route('/').get(async (req, res) => {
   try {
-    const users = await User.findAll({ raw: true });
     if (req.session.userId) {
-      const id = req.session.userId;
-      console.log(id)
-      const user = await User.findOne({ where: id });
+      const user = await User.findOne({ where: { id: req.session.userId });
       console.log(user);
       res.renderComponent(Home, { users, user });
     } else {
@@ -20,3 +17,4 @@ router.route('/').get(async (req, res) => {
 });
 
 module.exports = router;
+

@@ -2,6 +2,7 @@ const React = require('react');
 const Nav = require('./Nav');
 
 module.exports = function Layout({ children, user }) {
+
   return (
     <html lang="en">
       <head>
