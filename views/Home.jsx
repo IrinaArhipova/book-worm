@@ -1,11 +1,10 @@
 const React = require('react');
 const Layout = require('./Layout');
 const CardBook = require('./CardBook');
-const Comment = require('./Comment');
 
 module.exports = function Home({ user, books }) {
   return (
-    <Layout>
+    <Layout user={user}>
       <form>
         <div id="card-list">
           {books.map((book) => (
