@@ -1,7 +1,8 @@
 const React = require('react');
 const Nav = require('./Nav');
 
-module.exports = function Layout({ children, email }) {
+module.exports = function Layout({ children, user }) {
+
   return (
     <html lang="en">
       <head>
@@ -15,8 +16,8 @@ module.exports = function Layout({ children, email }) {
         <script defer src="/js/comment.js" />
         <title>sKeLeToN</title>
       </head>
-      <body>
-        <Nav email={email} />
+      <body style={{ backgroundColor: '#DCFFE7' }}>
+        <Nav user={user}></Nav>
         {children}
       </body>
     </html>
