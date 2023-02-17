@@ -5,9 +5,7 @@ const input = document.getElementById('input');
 if (formReg) {
   formReg.addEventListener('submit', async (event) => {
     event.preventDefault();
-    const {
-      name, email, password,
-    } = event.target;
+    const { name, email, password } = event.target;
     const response = await fetch('/auth/reg', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
@@ -38,7 +36,7 @@ if (formLog) {
     });
     const data = await response.json();
     if (data.message === 'ok') {
-      window.location.href = '/';
+      window.location.href = '/my-books';
     } else {
       input.innerHTML = data.message;
     }

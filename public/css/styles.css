@@ -1,60 +1,58 @@
 .card {
-    width: 18rem;
-    margin: 50px;
-    border: 1px solid black;
+  width: 18rem;
+  margin: 50px;
+  border: 1px solid black;
 }
 .card-text {
-    text-indent: 8px;
-    font-style: italic;
+  text-indent: 8px;
+  font-style: italic;
 }
+
 #text {
-    text-align: center;
-    font-size: 25px;
+  text-align: center;
+  font-size: 25px;
 }
 
 #card-list {
-    margin: 0px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: stretch;
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
 }
 
 .card-body1 {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    align-content: center;
-    align-items: center;
-    margin-bottom: 15px;
-    margin-left: 15px;
-    margin-right: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
-/* .card-comment {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
-} */
+.card:hover {
+  box-shadow: 8px 10px 5px 2px rgba(0, 0, 255, 0.2);
+}
 
 .form-comment {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: nowrap;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 
 .card-link {
-    text-decoration: none;
-    color: slateblue;
+  text-decoration: none;
+  color: slateblue;
 }
+
 #form_comment {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 body {
@@ -64,10 +62,43 @@ body {
 #tableForm {
     border: 2px solid black;
     margin: 50px 100px;
-
 }
 
 #div {
     display: flex;
     justify-content: center;
 }
+
+#navbarNav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-around;
+}
+
+#select {
+  border-radius: 5px;
+}
+
+#footerText {
+  color: rgb(248, 249, 250);
+}
+
+#footer {
+  bottom: 0;
+  text-align: center;
+  margin: 0 auto;
+  height: 30px;
+  padding: 0;
+  background-color: #212529;
+  width: 100vw;
+}
+
+#regBtn {
+  background-color: #212529;
+  color: rgb(248, 249, 250);
+}
+
