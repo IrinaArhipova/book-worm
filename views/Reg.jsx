@@ -26,7 +26,7 @@ module.exports = function Reg() {
             className="form-control"
           />
         </div>
-        <button id="regBtn" type="submit" className="btn btn-primary mt-3">
+        <button id="regBtn" type="submit" className="btn mt-3">
           REG ME
         </button>
         <div id="input" />

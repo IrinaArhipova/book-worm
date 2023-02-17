@@ -8,7 +8,7 @@ module.exports = function Home({ user, books }) {
       <form>
         <div id="card-list">
           {books.map((book) => (
-            <CardBook key={book.id} books={book} />
+            <CardBook key={book.id} books={book} user={user} />
           ))}
         </div>
       </form>
