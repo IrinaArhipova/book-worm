@@ -13,7 +13,7 @@
   font-size: 25px;
 }
 
-#card-list {
+#card-list, #allBooks {
   margin: 0px;
   display: flex;
   flex-direction: row;
@@ -84,13 +84,13 @@ body {
 }
 
 #footerText {
-  color: rgb(248, 249, 250);
+  color: rgb(192, 201, 210);
 }
 
 #footer {
   bottom: 0;
   text-align: center;
-  margin: 0 auto;
+  margin-top: 400px;
   height: 30px;
   padding: 0;
   background-color: #212529;
@@ -102,3 +102,18 @@ body {
   color: rgb(248, 249, 250);
 }
 
+#addBookForm{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cardonce {
+  display: flex;
+  justify-content: center;
+}
+
+#text-comment {
+  font-weight: normal;
+  font-style: italic;
+}

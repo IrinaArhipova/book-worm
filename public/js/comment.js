@@ -1,7 +1,6 @@
 const formComment = document.querySelector('#form_comment');
 // const cardCom = document.querySelector('#card_com');
 const table = document.getElementById('table');
-console.log(table);
 if (formComment) {
   formComment?.addEventListener('submit', async (e) => {
     e.preventDefault();

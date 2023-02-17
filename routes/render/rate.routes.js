@@ -1,11 +1,11 @@
 const router = require('express').Router();
 
-const { User, Rating, Book } = require('../../db/models');
+const { Rating } = require('../../db/models');
 
 router.route('/:bookId/:rating').get(async (req, res) => {
-  const userId = req.session.userId;
+  const { userId } = req.session;
   await Rating.create({
-    userId: userId,
+    userId,
     bookId: req.params.bookId,
     rating: req.params.rating,
   });

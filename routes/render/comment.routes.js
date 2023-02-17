@@ -2,7 +2,6 @@
 const router = require('express').Router();
 const { User, Comment, Book } = require('../../db/models');
 const CommentView = require('../../views/Comment');
-// const MyComment = require('../../views/MyComment');
 const TableComment = require('../../views/TableComment');
 
 router.get('/:id', async (req, res) => {

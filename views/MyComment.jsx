@@ -7,7 +7,7 @@ module.exports = function MyComment({ comments }) {
       <thead>
         <tr>
           <th scope="col">Name</th>
-          <th scope="col">Comment</th>
+          <th scope="col"></th>
         </tr>
       </thead>
       <tbody id="table">

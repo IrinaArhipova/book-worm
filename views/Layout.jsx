@@ -19,10 +19,10 @@ module.exports = function Layout({ children, user }) {
         <script defer src="/js/addBook.js" />
         <script defer src="/js/rate.js" />
         <script defer src="/js/trends.js" />
-        <script defer src="/js/comment.js" /> 
+        <script defer src="/js/comment.js" />
         <title>Bookworm</title>
       </head>
-      <body style={{ backgroundColor: '#DCFFE7' }}>
+      <body style={{ backgroundColor: '#DBDBDB' }}>
         <Nav user={user} />
         {children}
         <script
@@ -32,9 +32,6 @@ module.exports = function Layout({ children, user }) {
           crossOrigin="anonymous"
         />
       </body>
-      <footer>
-        <Footer></Footer>
-      </footer>
     </html>
   );
 };

@@ -4,11 +4,9 @@ module.exports = function Nav({ user }) {
   return (
     <nav
       id="Nav"
-      className="navbar navbar-expand-lg bg-body-tertiary bg-primary"
-      data-bs-theme="dark"
-    >
+      className="navbar navbar-expand-lg bg-body-tertiary bg-primary" data-bs-theme="dark" >
       <div className="container-fluid">
-        <a className="navbar-brand">Bookworm</a>
+        <a className="navbar-brand">Book-Worm</a>
         <div className="collapse navbar-collapse " id="navbarNav">
           <ul className="navbar-nav ">
             <li className="nav-item">
@@ -25,7 +23,10 @@ module.exports = function Nav({ user }) {
               <>
                 <li className="nav-item">
                   <a id="emailNav" className="nav-link">
-                    Hi, {user.name}!
+                    Hi,
+                    {' '}
+                    {user.name}
+                    !
                   </a>
                 </li>
                 <li className="nav-item">
@@ -38,12 +39,6 @@ module.exports = function Nav({ user }) {
                     Favourites
                   </a>
                 </li>
-                <li className="nav-item">
-                  <a id="LK" className="nav-link " href="#">
-                    My comments
-                  </a>
-                </li>
-
                 <li className="nav-item">
                   <a id="logOut" className="nav-link" href="/auth/logout">
                     Logout

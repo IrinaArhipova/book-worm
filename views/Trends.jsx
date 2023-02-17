@@ -1,9 +1,9 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function Trends({ booksArr }) {
+module.exports = function Trends({ booksArr, user }) {
   return (
-    <Layout>
+    <Layout user={user}>
       {' '}
       <table class="table">
         <thead>

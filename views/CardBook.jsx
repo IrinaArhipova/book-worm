@@ -12,8 +12,8 @@ module.exports = function CardBook({
         <p className="card-text">{!autor ? books.autor : books['Book.autor']}</p>
       </div>
       <div className="card-body1">
-        <a href={!comment ? `/comment/${books.id}` : `/comment/${books['Book.id']}`} className="card-link">Comments</a>
-       {user && ( {button ? <button data-id={books.id} type="button" className="btn btn-warning button">Add to favorites</button> : <div /> } )}
+        {user && (<a href={!comment ? `/comment/${books.id}` : `/comment/${books['Book.id']}`} className="card-link">Comments</a>)}
+        {user && button ? <button data-id={books.id} type="button" className="btn btn-warning button">Add to favorites</button> : <div /> }
       </div>
       {user ? (
         <form id="rateForm">

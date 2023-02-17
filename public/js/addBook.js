@@ -1,6 +1,6 @@
 const formAddBook = document.querySelector('#addBookForm');
 const noBooksPhrase = document.querySelector('#noBookesAdded');
-
+const allBooks = document.querySelector('#allBooks')
 
 if (formAddBook) {
   formAddBook.addEventListener('submit', async (event) => {
@@ -8,7 +8,6 @@ if (formAddBook) {
     const {
       action, method, nameBook, autor, comment, img,
     } = event.target;
-   
     const response = await fetch(action, {
       method,
       headers: { 'Content-Type': 'application/json' },

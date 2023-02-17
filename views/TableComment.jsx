@@ -5,8 +5,11 @@ module.exports = function TableComment({ comments }) {
     <>
       {comments.map((com) => (
         <tr>
-          <td>{com['User.name']}</td>
-          <td>{com.comment}</td>
+          <td>
+            {com['User.name']}
+            :
+          </td>
+          <td id="text-comment">{com.comment}</td>
         </tr>
       ))}
     </>
