@@ -34,7 +34,7 @@ module.exports = function Nav({ user }) {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a id="LK" className="nav-link " href="#">
+                  <a id="LK" className="nav-link " href="/favorite">
                     Favourites
                   </a>
                 </li>

@@ -15,10 +15,11 @@ module.exports = function Layout({ children, user }) {
         />
         <link rel="stylesheet" href="/css/styles.css" />
         <script defer src="/js/application.js" />
+        <script defer src="/js/favorite.js" />
         <script defer src="/js/addBook.js" />
         <script defer src="/js/rate.js" />
         <script defer src="/js/trends.js" />
-        {/* <script defer src="/js/comment.js" /> */}
+        <script defer src="/js/comment.js" /> 
         <title>Bookworm</title>
       </head>
       <body style={{ backgroundColor: '#DCFFE7' }}>

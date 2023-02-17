@@ -16,7 +16,6 @@ if (formReg) {
       }),
     });
     const data = await response.json();
-    console.log(data);
     if (data.message === 'ok') {
       window.location.href = '/';
     } else {
