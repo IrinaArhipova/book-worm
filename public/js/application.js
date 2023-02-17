@@ -46,7 +46,7 @@ if (formLog) {
     });
     const data = await response.json();
     if (data.message === 'ok') {
-      window.location.href = '/';
+      window.location.href = '/my-books';
     } else {
       input.innerHTML = data.message;
     }

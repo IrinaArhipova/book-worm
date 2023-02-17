@@ -13,6 +13,11 @@ module.exports = function Nav({ user }) {
             {user ? (
               <>
                 <li className="nav-item">
+                  <a id="LK" className="nav-link " href="/">
+                    Home
+                  </a>
+                </li>
+                <li className="nav-item">
                   <a id="emailNav" className="nav-link">
                     Hi,
                     {' '}
@@ -21,8 +26,8 @@ module.exports = function Nav({ user }) {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a id="LK" className="nav-link " href="#">
-                    Account
+                  <a id="LK" className="nav-link " href="/my-books">
+                    My books
                   </a>
                 </li>
                 <li className="nav-item">
@@ -30,6 +35,12 @@ module.exports = function Nav({ user }) {
                     Favourites
                   </a>
                 </li>
+                <li className="nav-item">
+                  <a id="LK" className="nav-link " href="#">
+                    My comments
+                  </a>
+                </li>
+
                 <li className="nav-item">
                   <a id="logOut" className="nav-link" href="/auth/logout">
                     Logout
