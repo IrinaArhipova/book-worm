@@ -8,19 +8,20 @@ router.route('/')
       const {
         nameBook, autor, comment, img,
       } = req.body;
-      const { userId } = req.session;
-      const book = {
-        nameBook, autor, img, userId,
-      };
       if (nameBook && autor && comment && img) {
-        const createdBook = await Book.create(book);
+        const { userId } = req.session;
+        const book = {
+          nameBook, autor, img, userId,
+        };
+        const books = await Book.create(book);
         // req.app.locals.allBooks = await Book.findAll();
-        const bookId = createdBook.id;
+        // const bookId = createdBook.id;
         // const createdComment = await Comment.create({ userId, bookId, comment });
-        res.json(res.renderComponent(CardBook, { createdBook }, { htmlOnly: true }));
+        // console.log(createdBook);
+        res.json({html: res.renderComponent(CardBook, { books }, { htmlOnly: true })});
       }
-    } catch (error) {
-      res.json(error);
+    } catch ({ message }) {
+      res.json(message);
     }
   });
 

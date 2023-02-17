@@ -6,7 +6,6 @@ const homeRouter = require('./routes/render/home.routes');
 const authRouter = require('./routes/render/auth.routes');
 const commentRouter = require('./routes/render/comment.routes');
 const addBookRouter = require('./routes/render/book.routes');
-const accountRouter = require('./routes/render/account.routes');
 const myBooksRouter = require('./routes/render/myBooks.routes');
 
 const app = express();

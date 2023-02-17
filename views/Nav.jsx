@@ -13,11 +13,6 @@ module.exports = function Nav({ user }) {
             {user ? (
               <>
                 <li className="nav-item">
-                  <a id="LK" className="nav-link " href="/">
-                    Home
-                  </a>
-                </li>
-                <li className="nav-item">
                   <a id="emailNav" className="nav-link">
                     Hi,
                     {' '}
