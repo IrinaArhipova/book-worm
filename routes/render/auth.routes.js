@@ -14,9 +14,7 @@ router.get('/login', (req, res) => {
 
 router.post('/reg', async (req, res) => {
   try {
-    const {
-      name, email, password,
-    } = req.body;
+    const { name, email, password } = req.body;
     if (name && password && email) {
       const user = await User.findOne({ where: { email } });
       if (!user) {
@@ -25,7 +23,7 @@ router.post('/reg', async (req, res) => {
         req.session.userId = newUser.id;
         res.json({ message: 'ok' });
       } else {
-        res.json({ message: 'Cant reg user!' });
+        res.json({ message: 'User is already exists' });
       }
     }
   } catch ({ message }) {
